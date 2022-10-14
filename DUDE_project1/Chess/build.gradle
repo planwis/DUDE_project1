@@ -32,9 +32,6 @@ task defaultTest(type: Test) {
 }
 test.dependsOn defaultTest
 
-test {
-    useJUnitPlatform()
-}
 
 defaultTest {
     useJUnitPlatform()
