@@ -2,7 +2,6 @@ import chess.Cell;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.rules.Timeout;
 import pieces.*;
 
 import java.util.ArrayList;
@@ -104,18 +103,19 @@ public class TestCaseDUDE {
         // C3: y >= 0
         //      b1: true
         //      b2: false
+
+        // c1b1, c2b2, c3b2
+        ArrayList<Cell> possibleMove = null;
+        // possibleMove = wb01.move(boardState, -1, -1); // (infinite loop)
+
         // -- Functionality-based --
-        // C4: Bishop is not block by other chess
+        // C4: Bishop is not block by other chess (able to move)
         //      b1: true
         //      b2: false
+        // C5: x and y are in range (0 - 7)
         // Combination Approach: ACoC
-        ArrayList<Cell> possibleMove = null;
-        long start = System.currentTimeMillis();
-        long end = start + (5 * 1000);
-        try (Timeout t = Timeout.(5, TimeUnit.SECONDS))
-        {
-            possibleMove = wb01.move(boardState, 10, 10);
-        }
+
+
 
 
         Assert.assertEquals(possibleMove.size(), 0);
