@@ -106,7 +106,7 @@ public class Main extends JFrame implements MouseListener
 	}
 	
 	//Constructor
-	private Main()
+	public Main()
     {
 		timeRemaining=60;
 		timeSlider = new JSlider();

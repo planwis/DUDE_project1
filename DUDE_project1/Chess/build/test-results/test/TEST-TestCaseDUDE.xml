@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestCaseDUDE" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-14T15:00:21" hostname="Wishs-MacBook-Air.local" time="0.002">
-  <properties/>
-  <testcase name="testcase1" classname="TestCaseDUDE" time="0.002"/>
-  <system-out><![CDATA[kuy
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
