@@ -9,6 +9,7 @@ import pieces.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -74,28 +75,28 @@ public class Main extends JFrame implements MouseListener
 	public static void main(String[] args){
 	
 	//variable initialization
-	wr01=new Rook("WR01","White_Rook.png",0);
-	wr02=new Rook("WR02","White_Rook.png",0);
-	br01=new Rook("BR01","Black_Rook.png",1);
-	br02=new Rook("BR02","Black_Rook.png",1);
-	wk01=new Knight("WK01","White_Knight.png",0);
-	wk02=new Knight("WK02","White_Knight.png",0);
-	bk01=new Knight("BK01","Black_Knight.png",1);
-	bk02=new Knight("BK02","Black_Knight.png",1);
-	wb01=new Bishop("WB01","White_Bishop.png",0);
-	wb02=new Bishop("WB02","White_Bishop.png",0);
-	bb01=new Bishop("BB01","Black_Bishop.png",1);
-	bb02=new Bishop("BB02","Black_Bishop.png",1);
-	wq=new Queen("WQ","White_Queen.png",0);
-	bq=new Queen("BQ","Black_Queen.png",1);
-	wk=new King("WK","White_King.png",0,7,3);
-	bk=new King("BK","Black_King.png",1,0,3);
+	wr01=new Rook("WR01","src/main/java/chess/White_Rook.png",0);
+	wr02=new Rook("WR02","src/main/java/chess/White_Rook.png",0);
+	br01=new Rook("BR01","src/main/java/chess/Black_Rook.png",1);
+	br02=new Rook("BR02","src/main/java/chess/Black_Rook.png",1);
+	wk01=new Knight("WK01","src/main/java/chess/White_Knight.png",0);
+	wk02=new Knight("WK02","src/main/java/chess/White_Knight.png",0);
+	bk01=new Knight("BK01","src/main/java/chess/Black_Knight.png",1);
+	bk02=new Knight("BK02","src/main/java/chess/Black_Knight.png",1);
+	wb01=new Bishop("WB01","src/main/java/chess/White_Bishop.png",0);
+	wb02=new Bishop("WB02","src/main/java/chess/White_Bishop.png",0);
+	bb01=new Bishop("BB01","src/main/java/chess/Black_Bishop.png",1);
+	bb02=new Bishop("BB02","src/main/java/chess/Black_Bishop.png",1);
+	wq=new Queen("WQ","src/main/java/chess/White_Queen.png",0);
+	bq=new Queen("BQ","src/main/java/chess/Black_Queen.png",1);
+	wk=new King("WK","src/main/java/chess/White_King.png",0,7,3);
+	bk=new King("BK","src/main/java/chess/Black_King.png",1,0,3);
 	wp=new Pawn[8];
 	bp=new Pawn[8];
 	for(int i=0;i<8;i++)
 	{
-		wp[i]=new Pawn("WP0"+(i+1),"White_Pawn.png",0);
-		bp[i]=new Pawn("BP0"+(i+1),"Black_Pawn.png",1);
+		wp[i]=new Pawn("WP0"+(i+1),"src/main/java/chess/White_Pawn.png",0);
+		bp[i]=new Pawn("BP0"+(i+1),"src/main/java/chess/Black_Pawn.png",1);
 	}
 	
 	//Setting up the board
@@ -121,7 +122,7 @@ public class Main extends JFrame implements MouseListener
 		Wnames=new ArrayList<String>();
 		Bnames=new ArrayList<String>();
 		board.setMinimumSize(new Dimension(800,700));
-		ImageIcon img = new ImageIcon(this.getClass().getResource("icon.png"));
+		ImageIcon img = new ImageIcon("icon.png");
 		this.setIconImage(img.getImage());
 		
 		//Time Slider Details
@@ -278,7 +279,7 @@ public class Main extends JFrame implements MouseListener
 			@Override
 		    public void paintComponent(Graphics g) {
 				  try {
-			          image = ImageIO.read(this.getClass().getResource("clash.jpg"));
+			          image = ImageIO.read(new File("src/main/java/chess/clash.jpg"));
 			       } catch (IOException ex) {
 			            System.out.println("not found");
 			       }

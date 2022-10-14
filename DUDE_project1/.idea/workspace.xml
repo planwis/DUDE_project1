@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ce3d062-5029-4df8-8d2d-b88ca8d12d58" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/Black_Bishop.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/Black_Bishop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/Black_King.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/Black_King.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/Black_Knight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/Black_Knight.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/Black_Pawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/Black_Pawn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/Black_Queen.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/Black_Queen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/Black_Rook.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/Black_Rook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/Cell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/White_Bishop.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/White_Bishop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/White_King.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/White_King.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/White_Knight.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/White_Knight.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/White_Pawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/White_Pawn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/White_Queen.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/White_Queen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/White_Rook.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/White_Rook.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/clash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/clash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/chess/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/chess/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/pieces/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/pieces/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/pieces/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/pieces/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/pieces/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/pieces/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/pieces/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/pieces/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/pieces/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/pieces/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/pieces/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chess/src/pieces/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chess/src/main/pieces/Rook.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DUDE_project1" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2G2eUJExSIqdlS50tRFLddy4Xi9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/planwis/Mahidol/QA/DUDE_project1/DUDE_project1/build.gradle&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propGUI&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Chess/src/main" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.TestCase.testcase1">
+    <configuration name="Snake" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Snake" />
+      <module name="DUDE_project1.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DUDE_project1 [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="check" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestCase.testcase1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;TestCase.testcase1&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="testcase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--scan" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;testcase&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="testcase.testcase1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;testcase.testcase1&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.TestCase.testcase1" />
+        <item itemvalue="Gradle.testcase" />
+        <item itemvalue="Application.Snake" />
+        <item itemvalue="Gradle.testcase.testcase1" />
+        <item itemvalue="Gradle.DUDE_project1 [check]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ce3d062-5029-4df8-8d2d-b88ca8d12d58" name="Changes" comment="" />
+      <created>1665591119596</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665591119596</updated>
+      <workItem from="1665591120937" duration="476000" />
+      <workItem from="1665591603739" duration="6719000" />
+      <workItem from="1665752851009" duration="1316000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
