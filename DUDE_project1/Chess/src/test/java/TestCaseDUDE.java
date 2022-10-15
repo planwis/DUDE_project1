@@ -115,20 +115,20 @@ public class TestCaseDUDE {
         possibleMove = wb01.move(boardState, 7, 2);
         Assert.assertEquals(0, possibleMove.size());
 
-//        // test case #2: c1b1, c2b1, c3b2 (failed)
-//        possibleMove = null;
-//        possibleMove = wb01.move(boardState, 1, -1);
-//        Assert.assertEquals(0, possibleMove.size());
-//
-//        // test case #3: c1b1, c2b2, c3b1 (failed)
-//        possibleMove = null;
-//        possibleMove = wb01.move(boardState, -1, 2);
-//        Assert.assertEquals(0, possibleMove.size());
-//
-//        // test case #4: c1b1, c2b2, c3b2 (failed)
-//        possibleMove = null;
-//        possibleMove = wb01.move(boardState, -1, -1);
-//        Assert.assertEquals(0, possibleMove.size());
+        // test case #2: c1b1, c2b1, c3b2 (failed)
+        possibleMove = null;
+        possibleMove = wb01.move(boardState, 1, -1);
+        Assert.assertEquals(0, possibleMove.size());
+
+        // test case #3: c1b1, c2b2, c3b1 (failed)
+        possibleMove = null;
+        possibleMove = wb01.move(boardState, -1, 2);
+        Assert.assertEquals(0, possibleMove.size());
+
+        // test case #4: c1b1, c2b2, c3b2 (failed)
+        possibleMove = null;
+        possibleMove = wb01.move(boardState, -1, -1);
+        Assert.assertEquals(0, possibleMove.size());
 
 
         // test case #5: c1b2, c2b1, c3b1
@@ -182,20 +182,40 @@ public class TestCaseDUDE {
         Assert.assertEquals(7, possibleMove.size());
 
         // test case #2: c4b1, c5b1, c6b2 (failed)
-//        possibleMove = null;
-//        possibleMove = wb01.move(noChessBoard, 7, -1);
-//        Assert.assertEquals(0, possibleMove.size());
+        possibleMove = null;
+        possibleMove = wb01.move(noChessBoard, 7, -1);
+        Assert.assertEquals(0, possibleMove.size());
 
-        // test case #3: c4b1, c5b2, c6b1
+        // test case #3: c4b1, c5b2, c6b1 (failed)
         possibleMove = null;
         possibleMove = wb01.move(noChessBoard, -1, 2);
         Assert.assertEquals(0, possibleMove.size());
-        // test case #4: c4b1, c5b2, c6b2
+
+        // test case #4: c4b1, c5b2, c6b2 (failed)
+        possibleMove = null;
+        possibleMove = wb01.move(noChessBoard, -1, -1);
+        Assert.assertEquals(0, possibleMove.size());
 
         // test case #5: c4b2, c5b1, c6b1
-        // test case #6: c4b2, c5b1, c6b2
-        // test case #7: c4b2, c5b2, c6b1
-        // test case #8: c4b2, c5b2, c6b2
+        possibleMove = null;
+        possibleMove = wb01.move(boardState, 7, 2);
+        Assert.assertEquals(0, possibleMove.size());
 
+        // test case #6: c4b2, c5b1, c6b2
+        possibleMove = null;
+        possibleMove = wb01.move(boardState, 7, -1);
+        Assert.assertEquals(0, possibleMove.size());
+
+        // test case #7: c4b2, c5b2, c6b1 (failed)
+        possibleMove = null;
+        possibleMove = wb01.move(boardState, -1, 2);
+        Assert.assertEquals(0, possibleMove.size());
+
+        // test case #8: c4b2, c5b2, c6b2 (failed)
+        possibleMove = null;
+        possibleMove = wb01.move(boardState, -1, -1);
+        Assert.assertEquals(0, possibleMove.size());
     }
+
+
 }
