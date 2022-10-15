@@ -1,7 +1,9 @@
 import chess.Cell;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import pieces.*;
 
 import java.util.ArrayList;
@@ -90,11 +92,12 @@ public class TestCaseDUDE {
                 boardState[i][j]=cell;
             }
     }
-
+    
     @Test
     public void testBishopPossibleMove() {
+        // Combination Approach: ACoC
         // -- Interface-based --
-        // C1: boardState is null
+        // C1: boardState is not null
         //      b1: true
         //      b2: false
         // C2: x >= 0
@@ -104,20 +107,95 @@ public class TestCaseDUDE {
         //      b1: true
         //      b2: false
 
-        // c1b1, c2b2, c3b2
-        ArrayList<Cell> possibleMove = null;
-        // possibleMove = wb01.move(boardState, -1, -1); // (infinite loop)
+        ArrayList<Cell> possibleMove;
+        Cell nullBoardState[][] = null;
+
+        // test case #1: c1b1, c2b1, c3b1
+        possibleMove = null;
+        possibleMove = wb01.move(boardState, 7, 2);
+        Assert.assertEquals(0, possibleMove.size());
+
+//        // test case #2: c1b1, c2b1, c3b2 (failed)
+//        possibleMove = null;
+//        possibleMove = wb01.move(boardState, 1, -1);
+//        Assert.assertEquals(0, possibleMove.size());
+//
+//        // test case #3: c1b1, c2b2, c3b1 (failed)
+//        possibleMove = null;
+//        possibleMove = wb01.move(boardState, -1, 2);
+//        Assert.assertEquals(0, possibleMove.size());
+//
+//        // test case #4: c1b1, c2b2, c3b2 (failed)
+//        possibleMove = null;
+//        possibleMove = wb01.move(boardState, -1, -1);
+//        Assert.assertEquals(0, possibleMove.size());
+
+
+        // test case #5: c1b2, c2b1, c3b1
+        possibleMove = null;
+        Assert.assertThrows(NullPointerException.class, () -> {
+            wb01.move(nullBoardState, 0, 0);
+        });
+
+        // test case #6: c1b2, c2b1, c3b2
+        possibleMove = null;
+        Assert.assertThrows(NullPointerException.class, () -> {
+            wb01.move(nullBoardState, 0, -1);
+        });
+
+        // test case #7: c1b2, c2b2, c3b1
+        possibleMove = null;
+        Assert.assertThrows(NullPointerException.class, () -> {
+            wb01.move(nullBoardState, -1, 0);
+        });
+
+        // test case #8: c1b2, c2b2, c3b2
+        possibleMove = null;
+        Assert.assertThrows(NullPointerException.class, () -> {
+            wb01.move(nullBoardState, -1, -1);
+        });
 
         // -- Functionality-based --
         // C4: Bishop is not block by other chess (able to move)
         //      b1: true
         //      b2: false
-        // C5: x and y are in range (0 - 7)
-        // Combination Approach: ACoC
+        // C5: x is in range (0 - 7)
+        //      b1: true
+        //      b2: false
+        // C6: y is in range (0 - 7)
+        //      b1: true
+        //      b2: false
 
+        // set up board with no chess so chess can move freely
+        Cell[][] noChessBoard = new Cell[8][8];
+        for(int i=0;i<8;i++)
+            for(int j=0;j<8;j++)
+            {
+                P=null;
+                cell=new Cell(i,j,P);
+                noChessBoard[i][j]=cell;
+            }
 
+        // test case #1: c4b1, c5b1, c6b1
+        possibleMove = null;
+        possibleMove = wb01.move(noChessBoard, 7, 2);
+        Assert.assertEquals(7, possibleMove.size());
 
+        // test case #2: c4b1, c5b1, c6b2 (failed)
+//        possibleMove = null;
+//        possibleMove = wb01.move(noChessBoard, 7, -1);
+//        Assert.assertEquals(0, possibleMove.size());
 
-        Assert.assertEquals(possibleMove.size(), 0);
+        // test case #3: c4b1, c5b2, c6b1
+        possibleMove = null;
+        possibleMove = wb01.move(noChessBoard, -1, 2);
+        Assert.assertEquals(0, possibleMove.size());
+        // test case #4: c4b1, c5b2, c6b2
+
+        // test case #5: c4b2, c5b1, c6b1
+        // test case #6: c4b2, c5b1, c6b2
+        // test case #7: c4b2, c5b2, c6b1
+        // test case #8: c4b2, c5b2, c6b2
+
     }
 }
