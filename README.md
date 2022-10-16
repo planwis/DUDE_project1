@@ -33,7 +33,7 @@
    |  (-1,0)         |         NullPointerException          |
    |  (-1,-1)         |     NullPointerException              |
  
- ### 2). TestBishopPossibleMove
+ ### 2). TestQueenPossibleMove
 *  Goal : Test the possible move of Queen
 * Testable function: Queen.move(Cell[][] state, int x, int y)
 * Parameters: Cell[][] state, int x, int y
