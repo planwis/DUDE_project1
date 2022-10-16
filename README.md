@@ -106,12 +106,13 @@ However, we measure it by checking the size of that Arraylist and if there is po
     | ------------- | ------------- | -------- |
     | C1: value of gameswon | greater than 0| equal to 0 |
     | C2: value of gameplayed      | greater than 0| equal to 0 |
-   
+* Possible test cases = 3 * 2 = 6 test cases
   * Functionality-based
     | Characteristic     | b1     | b2     |b3     |
     | ------------- | ------------- | -------- | -------- |
     | C3: Comparison of gameswon and gamesplayed| b1: gameswon < gamesplayed| b2: gameswon = gamesplayed |b3: gameswon > gamesplayed |
-   
+* Possible test cases = 3 * 2 = 6 test cases
+    * Test Cases = (c1b1, c2b1, c3b1), (c1b1, c2b2, c3b3), (c1b2, c2b1, c3b2), (c1b2, c2b2, c3b1), (c1b1, c2b2, c3b2), (c1b2, c2b1, c3b3)
 * ISP Criteria: PWC
 * Test values and expected values:
    | Test Values   | Expected Values   | 
@@ -123,6 +124,7 @@ However, we measure it by checking the size of that Arraylist and if there is po
    |    infeasible     |       -    |
    |     infeasible      |      -         |
  
+
  ### 4). TestKingPossibleMove
 *  Goal : Test the possible move of King
 * Testable function: King.move(Cell[][] state, int x, int y)
@@ -150,16 +152,24 @@ Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
    | Test Values   | Expected Values   | 
    | ------------- | -------------     | 
-   |  (7,4)        |       ArrayList[]            |
-   |  (7,-1)       |        ArrayList[]             |
-   |  (-1,4)         |      ArrayList[]               |
-   |  (-1,-1)         |      ArrayList[]             |
-   |  (0,0)         |      NullPointerException            |
-   |  (0,-1)         |      NullPointerException              |
-   |  (-1,0)         |      NullPointerException              |
-   |  (-1,-1)         |      NullPointerException              |
- 
- 
+   |  (boardState, 7, 4)       |        ArrayList[]          |
+   |  (boardState, 7, -1)       |        ArrayList[]            |
+   |  (boardState, -1, 4)         |      ArrayList[]              |
+   |  (boardState, -1, -1)         |      ArrayList[]            |
+   |  (nullBoardState, 0, 0)         |      NullPointerException            |
+   |  (nullBoardState, 0, -1)         |      NullPointerException              |
+   |  (nullBoardState, -1, 0)          |      NullPointerException              |
+   |  (nullBoardState, -1, -1)          |      NullPointerException              |
+
+   |  (noChessBoard, 7, 4)       |        ArrayList[(7,3)(6,3)(6,4)(6,5)(7,5)]         |
+   |  (noChessBoard, 7, -1)       |        ArrayList[]            |
+   |  (noChessBoard, -1, 4)         |      ArrayList[]              |
+   |  (noChessBoard, -1, -1)         |      ArrayList[]            |
+   |  (boardState, 7, 4)         |      ArrayList[]             |
+   |  (boardState, 7, -1)         |      ArrayList[]               |
+   |  (boardState, -1, 4)          |      ArrayList[]              |
+   |  (boardState, -1, -1)          |      ArrayList[]               |
+
  ### 5). TestKnightPossibleMove
 * Goal : Test the possible move of Knight
 * Testable function: Knight.move(Cell[][] state, int x, int y)
