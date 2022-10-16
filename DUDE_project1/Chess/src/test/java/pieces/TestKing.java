@@ -142,7 +142,6 @@ public class TestKing {
     }
 
     //  test case #2: c1b1, c2b1, c3b2 (failed)
-    // The program should be crashed since input -1 is invalid. However, it returns 0, which is not correct.
     @Test
     public void testKingPossibleMove2() {
         possibleMove = wk.move(boardState, 7, -1);

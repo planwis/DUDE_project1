@@ -1,7 +1,9 @@
 package pieces;
 
 import chess.Cell;
+import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 
@@ -104,6 +106,119 @@ public class TestRook {
     }
 
     // ---------- Function: Rook.move(Cell[][] state, int x, int y) ----------
+    // Combination Approach: MBCC
+    // -- Interface-based --
+    // C1: boardState is not null
+    //      b1: true
+    //      b2: false
+    // C2: x >= 0
+    //      b1: true
+    //      b2: false
+    // C3: y >= 0
+    //      b1: true
+    //      b2: false
+    // Base Choice = (c1b1, c2b1, c3b1) (c1b2, c2b1, c3b1)
+    //   Test case = (c1b1, c2b1, c3b2) (c1b2, c2b1, c3b2)
+    //             = (c1b1, c2b2, c3b1) (c1b2, c2b2, c3b1)
+    // Possible test cases: 2+ [{2* (2-2)} + {2* (2-2)} + {2* (2-2)}] = 6 Cases
 
+    // test case #1: c1b1, c2b1, c3b1
+    @Test
+    public void testRookPossibleMove1() {
+        possibleMove = wr01.move(boardState, 7, 0);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+    // test case #2: c1b1, c2b1, c3b2 (failed)
+    @Test
+    public void testRookPossibleMove2() {
+        possibleMove = wr01.move(boardState, 7, -1);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+    // test case #3: c1b1, c2b2, c3b1 (failed)
+    @Test
+    public void testRookPossibleMove3() {
+        possibleMove = wr01.move(boardState, -1, 0);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+    // test case #4: c1b2, c2b1, c3b1
+    @Test
+    public void testRookPossibleMove4() {
+        Assert.assertThrows(NullPointerException.class, () -> {
+            wr01.move(nullBoardState, 7, 0);
+        });
+    }
+
+    // test case #5: c1b2, c2b1, c3b2
+    @Test
+    public void testRookPossibleMove5() {
+        Assert.assertThrows(NullPointerException.class, () -> {
+            wr01.move(nullBoardState, 7, -1);
+        });
+    }
+
+    // test case #6: c1b2, c2b2, c3b1
+    @Test
+    public void testRookPossibleMove6() {
+        Assert.assertThrows(NullPointerException.class, () -> {
+            wr01.move(nullBoardState, -1, 0);
+        });
+    }
+
+    // -- Functionality-based --
+    // C4: Rook is not block by other chess (able to move)
+    //      b1: true
+    //      b2: false
+    // C5: x is in range (0 - 7)
+    //      b1: true
+    //      b2: false
+    // C6: y is in range (0 - 7)
+    //      b1: true
+    //      b2: false
+
+    // test case #7: c4b1, c5b1, c6b1
+    @Test
+    public void testRookPossibleMove7() {
+        possibleMove = wr01.move(noChessBoard, 7, 0);
+        Assert.assertEquals(14, possibleMove.size());
+    }
+
+    // test case #8: c4b1, c5b1, c6b2 (failed)
+    @Test
+    public void testRookPossibleMove8() {
+        possibleMove = wr01.move(noChessBoard, 7, -1);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+    // test case #9: c4b1, c5b2, c6b1 (failed)
+    @Test
+    public void testRookPossibleMove9() {
+        possibleMove = wr01.move(noChessBoard, -1, 0);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+    // test case #10: c4b2, c5b1, c6b1
+    @Test
+    public void testRookPossibleMove10() {
+        possibleMove = wr01.move(boardState, 7, 0);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+    // test case #11: c4b2, c5b1, c6b2 (failed)
+    @Test
+    public void testRookPossibleMove11() {
+        possibleMove = wr01.move(boardState, 7, -1);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+
+    // test case #12: c4b2, c5b2, c6b1 (failed)
+    @Test
+    public void testRookPossibleMove12() {
+        possibleMove = wr01.move(boardState, -1, 0);
+        Assert.assertEquals(0, possibleMove.size());
+    }
     // ---------- end of testing Rook.move(Cell[][] state, int x, int y) ----------
 }

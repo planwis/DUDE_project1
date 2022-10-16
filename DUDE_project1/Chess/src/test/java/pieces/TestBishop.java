@@ -247,7 +247,7 @@ public class TestBishop {
     // test case #16: c4b2, c5b2, c6b2 (failed)
     @Test
     public void testBishopPossibleMove16() {
-        possibleMove = wb01.move(boardState, -1, 2);
+        possibleMove = wb01.move(boardState, -1, -2);
         Assert.assertEquals(0, possibleMove.size());
     }
 
