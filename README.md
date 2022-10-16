@@ -20,5 +20,15 @@
     | C4: Bishop is not block by other chess (able to move)| True| False |
     | C5: x is in range of chess board (0 - 7) | True| False |
     |C6: y is in range of chess board (0 - 7)|True| False |
-* ISP Criteria:
+* ISP Criteria: ACoC
 * Test values and expected values:
+   | Test Values   | Exoected Values   | 
+   | ------------- | -------------     | 
+   |               |                   |
+   |               |                   |
+   |               |                   |
+   |               |                   |
+   |               |                   |
+   |               |                   |
+   |               |                   |
+   |               |                   |
