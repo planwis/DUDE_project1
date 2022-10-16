@@ -61,10 +61,9 @@ However, we measure it by checking the size of that Arraylist and if there is po
     | C1: boardState is not null | True| False |
     | C2: x >= 0         | True| False |
     |C3: y >= 0|True| False |
-    |C6: y is in range of chess board (0 - 7)|True| False |
-* Possible Test = 2 + [{2 * (2 - 2)} + {2 * (2 - 1)} + {2 * (2 - 1)}]
-    * Multiple Base Choice = (c4b1, c5b1, c6b1), (c4b2, c5b1, c6b1)
-    * Test Cases = (c4b1, c5b2, c6b1),(c4b2, c5b2, c6b1),(c4b1, c5b1, c6b2),(c4b2, c5b1, c6b2)
+* Possible Test = 2 + [{2 * (2 - 2)} + {2 * (2 - 1)} + {2 * (2 - 1)}] = 6 cases
+    * Multiple Base Choice = (c1b1, c2b1, c3b1), (c1b2, c2b1, c3b1)
+    * Test Cases = (c1b1, c2b2, c3b1),(c1b2, c2b2, c3b1),(c1b1, c2b1, c3b2),(c1b2, c2b1, c3b2)
 * ISP Criteria: MBCC
   * Functionality-based
     | Characteristic     | b1     | b2     |
@@ -73,8 +72,8 @@ However, we measure it by checking the size of that Arraylist and if there is po
     | C5: x is in range of chess board (0 - 7) | True| False |
     |C6: y is in range of chess board (0 - 7)|True| False |
 * Possible Test = 2 + [{2 * (2 - 2)} + {2 * (2 - 1)} + {2 * (2 - 1)}] = 6 cases
-    * Multiple Base Choice = (c1b1, c2b1, c3b1), (c1b2, c2b1, c3b1)
-    * Test Cases = (c1b1, c2b2, c3b1),(c1b2, c2b2, c3b1),(c1b1, c2b1, c3b2),(c1b2, c2b1, c3b2)
+    * Multiple Base Choice = (c4b1, c5b1, c6b1), (c4b2, c5b1, c6b1)
+    * Test Cases = (c4b1, c5b2, c6b1),(c4b2, c5b2, c6b1),(c4b1, c5b1, c6b2),(c4b2, c5b1, c6b2)
 * ISP Criteria: MBCC
 * Test values and expected values:
 Actually the expected value should be Arraylist of possible move.
@@ -87,8 +86,7 @@ However, we measure it by checking the size of that Arraylist and if there is po
    |  (nullBoardState, -1, 3)         |       NullPointerException             |
    |  (boardState, 7, -1)         |    ArrayList[]              |
    |  (boardState, 3, -1)         |   ArrayList[]                 |
-   |  (noChessBoard, 7, 3)        |       ArrayList [(7,0),(7,1),(7,2),(7,3),(6,3),(5,2),(4,1),(3,0),(6,4),(5,4),(4,4),(3,4),(2,4),(1,4),(0,4),(6,5),(5,6),(4,7),(7,5),(7,6),(7,7)]
-          |
+   |  (noChessBoard, 7, 3)        |       ArrayList [(7,0),(7,1),(7,2),(7,3),(6,3),(5,2),(4,1),(3,0),(6,4),(5,4),(4,4),(3,4),(2,4),(1,4),(0,4),(6,5),(5,6),(4,7),(7,5),(7,6),(7,7)]|
    |  (boardState, 7, 3)       |        ArrayList[]             |
    |  (noChessBoard, -1, 3)         |        ArrayList[]            |
    |  (boardState, -1, 3)         |       ArrayList[]             |
