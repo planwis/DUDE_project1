@@ -127,7 +127,7 @@ public class TestQueen {
     // test case #1: c1b1, c2b1, c3b1
     @Test
     public void testQueenPossibleMove1() {
-        possibleMove = wq.move(boardState, 7, 3);
+        possibleMove = wq.move(boardState, 7, 4);
         Assert.assertEquals(0, possibleMove.size());
     }
 
@@ -142,7 +142,7 @@ public class TestQueen {
     // test case #3: c1b1, c2b2, c3b1 (failed)
     @Test
     public void testQueenPossibleMove3() {
-        possibleMove = wq.move(boardState, -1, 3);
+        possibleMove = wq.move(boardState, -1, 4);
         Assert.assertEquals(0, possibleMove.size());
     }
 
@@ -187,28 +187,28 @@ public class TestQueen {
     // test case #7: c4b1, c5b1, c6b1
     @Test
     public void testQueenPossibleMove7() {
-        possibleMove = wq.move(noChessBoard, 7, 3);
+        possibleMove = wq.move(noChessBoard, 7, 4);
         Assert.assertEquals(21, possibleMove.size());
     }
 
     // test case #8: c4b2, c5b1, c6b1
     @Test
     public void testQueenPossibleMove8() {
-        possibleMove = wq.move(boardState, 7, 3);
+        possibleMove = wq.move(boardState, 7, 4);
         Assert.assertEquals(0, possibleMove.size());
     }
 
     // test case #9: c4b1, c5b2, c6b1 (failed)
     @Test
     public void testQueenPossibleMove9() {
-        possibleMove = wq.move(noChessBoard, -1, 3);
+        possibleMove = wq.move(noChessBoard, -1, 4);
         Assert.assertEquals(0, possibleMove.size());
     }
 
     // test case #10: c4b2, c5b2, c6b1 (failed)
     @Test
     public void testQueenPossibleMove10() {
-        possibleMove = wq.move(boardState, -1, 3);
+        possibleMove = wq.move(boardState, -1, 4);
         Assert.assertEquals(0, possibleMove.size());
     }
 

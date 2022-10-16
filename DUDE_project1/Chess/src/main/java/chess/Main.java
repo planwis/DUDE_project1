@@ -244,7 +244,7 @@ public class Main extends JFrame implements MouseListener
 				else if(i==7&&j==4)
 					P=wq;
 				else if(i==1)
-				P=bp[j];
+					P=bp[j];
 				else if(i==6)
 					P=wp[j];
 				cell=new Cell(i,j,P);
