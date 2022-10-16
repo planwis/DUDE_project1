@@ -289,5 +289,6 @@ public class TestKing {
     public void testKingIsInDanger4() {
         Assert.assertFalse(wk.isindanger(boardState));
     }
+
     // ---------- end of testing King.isindanger(Cell[][] state) ----------
 }

@@ -1,10 +1,7 @@
 package pieces;
 
 import chess.Cell;
-import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test;
-import pieces.*;
 
 import java.util.ArrayList;
 

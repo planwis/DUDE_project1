@@ -4,7 +4,6 @@ import chess.Cell;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import pieces.*;
 
 import java.util.ArrayList;
 
@@ -12,6 +11,7 @@ public class TestKnight {
     private Cell boardState[][];
     private Cell noChessBoard[][];
     private Cell nullBoardState[][] = null;
+    private Cell knightCantMove[][];
 
     private ArrayList<Cell> possibleMove;
     private static Rook wr01, wr02, br01, br02;
@@ -104,9 +104,113 @@ public class TestKnight {
             }
 
         possibleMove = null;
+
+        // set up board with no chess so chess can move freely
+        noChessBoard = new Cell[8][8];
+        for (int i = 0; i < 8; i++)
+            for (int j = 0; j < 8; j++) {
+                P = null;
+                cell = new Cell(i, j, P);
+                noChessBoard[i][j] = cell;
+            }
+
+        // set up board with pawn so knight can not move
+        knightCantMove = new Cell[8][8];
+        for (int i = 0; i < 8; i++)
+            for (int j = 0; j < 8; j++) {
+                P = null;
+                if(i==5&&j==0)
+                    P=wp[5];
+                else if(i==5&&j==2)
+                    P=wp[6];
+                else if(i==6&&j==3)
+                    P=wp[7];
+                cell = new Cell(i, j, P);
+                knightCantMove[i][j] = cell;
+            }
+
     }
 
     // ---------- Function: Knight.move(Cell[][] state, int x, int y) ----------
+    // Combination Approach: BCC
+    // -- Interface-based --
+    // C1: boardState is not null
+    //      b1: true
+    //      b2: false
+    // C2: x >= 0
+    //      b1: true
+    //      b2: false
+    // C3: y >= 0
+    //      b1: true
+    //      b2: false
+
+    // test case #1: c1b1, c2b1, c3b1
+    @Test
+    public void testKnightPossibleMove1() {
+        possibleMove = wk01.move(boardState, 7, 1);
+        Assert.assertEquals(2, possibleMove.size());
+    }
+
+    // test case #2: c1b2, c2b1, c3b1
+    @Test
+    public void testKnightPossibleMove2() {
+        Assert.assertThrows(NullPointerException.class, () -> {
+            wk01.move(nullBoardState, 7, 1);
+        });
+    }
+
+    // test case #3: c1b1, c2b2, c3b1 (failed)
+    @Test
+    public void testKnightPossibleMove3() {
+        possibleMove = wk01.move(boardState, -1, 1);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+    //test case #4: c1b1, c2b1, c3b2 (failed)
+    @Test
+    public void testKnightPossibleMove4() {
+        possibleMove = wk01.move(boardState, 7, -1);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+    // -- Functionality-based --
+    // C4: Knight is not block by other chess (able to move)
+    //      b1: true
+    //      b2: false
+    // C5: x is in range (0 - 7)
+    //      b1: true
+    //      b2: false
+    // C6: y is in range (0 - 7)
+    //      b1: true
+    //      b2: false
+
+    //test case #5: c4b1, c5b1, c6b1
+    @Test
+    public void testKnightPossibleMove5() {
+        possibleMove = wk01.move(noChessBoard, 7, 1);
+        Assert.assertEquals(3, possibleMove.size());
+    }
+
+    //test case #6: c4b1, c5b1, c6b1
+    @Test
+    public void testKnightPossibleMove6() {
+        possibleMove = wk01.move(knightCantMove, 7, 1);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+    //test case #7: c4b1, c5b2, c6b1 (failed)
+    @Test
+    public void testKnightPossibleMove7() {
+        possibleMove = wk01.move(noChessBoard, -1, 1);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+    //test case #8: c4b1, c5b2, c6b1 (failed)
+    @Test
+    public void testKnightPossibleMove8() {
+        possibleMove = wk01.move(noChessBoard, 7, -1);
+        Assert.assertEquals(0, possibleMove.size());
+    }
 
     // ---------- end of testing Knight.move(Cell[][] state, int x, int y) ----------
-}
+    }
