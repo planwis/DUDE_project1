@@ -73,33 +73,30 @@ public class TestCell {
         Assert.assertEquals(bk01, cell.getpiece());
     }
 
-    // test case #2: c1b1, c2b2, c3b1 (failed)
+    // test case #2: c1b1, c2b2, c3b1
     @Test
     public void testConstructCell2() {
         P = null;
-        // failed case, because the program doesn't allow for input -1 in the x or y
         cell = new Cell(0,-1, P);
         Assert.assertEquals(0,cell.x);
         Assert.assertEquals(-1,cell.y);
         Assert.assertEquals(null, cell.getpiece());
     }
 
-    // test case #3: c1b2, c2b1, c3b1 (failed)
+    // test case #3: c1b2, c2b1, c3b1
     @Test
     public void testConstructCell3() {
         P = null;
-        // failed case, because the program doesn't allow for input -1 in the x or y
         cell = new Cell(-1,1, P);
         Assert.assertEquals(-1,cell.x);
         Assert.assertEquals(1,cell.y);
         Assert.assertEquals(null, cell.getpiece());
     }
 
-    // test case #4: c1b2, c2b2, c3b2 (failed)
+    // test case #4: c1b2, c2b2, c3b2
     @Test
     public void testConstructCell4() {
         P = bk01;
-        // failed case, because the program doesn't allow for input -1 in the x or y
         cell = new Cell(-1,-1, P);
         Assert.assertEquals(-1,cell.x);
         Assert.assertEquals(-1,cell.y);
