@@ -240,7 +240,7 @@ public class TestKing {
         Assert.assertEquals(0, possibleMove.size());
     }
 
-    // test case #14: c4b2, c5b1, c6b1
+    // test case #14: c4b2, c5b1, c6b2
     @Test
     public void testKingPossibleMove14() {
         possibleMove = wk.move(boardState, 7, -1);
