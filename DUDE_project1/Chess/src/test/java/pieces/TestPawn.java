@@ -1,7 +1,9 @@
 package pieces;
 
 import chess.Cell;
+import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 
@@ -104,6 +106,98 @@ public class TestPawn {
     }
 
     // ---------- Function: Pawn.move(Cell[][] state, int x, int y) ----------
+    // Combination Approach: BCC
+    // -- Interface-based --
+    // C1: boardState is not null
+    //      b1: true
+    //      b2: false
+    // C2: x >= 0
+    //      b1: true
+    //      b2: false
+    // C3: y >= 0
+    //      b1: true
+    //      b2: false
+    // Possible Test cases = 1 + (2 - 1) + (2 - 1) + (2 - 1) = 4 cases
+    //         Base Choice = (c1b1,c2b1,c3b1)
+    //          Test Cases = (c1b2,c2b1,c3b1)
+    //                     = (c1b1,c2b2,c3b1)
+    //                     = (c1b1,c2b1,c3b2)
 
-    // ---------- end of testing Pawn.move(Cell[][] state, int x, int y) ----------
+    //test case #1: c1b1,c2b1,c3b1
+    @Test
+    public void testPawnPossibleMove1() {
+        possibleMove = wp[1].move(boardState, 6, 1);
+        Assert.assertEquals(2, possibleMove.size());
+    }
+
+    //test case #2: c1b2,c2b1,c3b1
+    @Test
+    public void testPawnPossibleMove2() {
+        Assert.assertThrows(NullPointerException.class, () -> {
+            wp[1].move(nullBoardState, 6, 1);
+        });
+    }
+
+    //test case #3:c1b1,c2b2,c3b1  (failed)
+    @Test
+    public void testPawnPossibleMove3() {
+        possibleMove = wp[1].move(boardState, -1, 1);
+        Assert.assertEquals(0, possibleMove.size());
+
+    }
+
+    //test case #4:c1b1,c2b1,c3b2 (failed)
+    @Test
+    public void testPawnPossibleMove4() {
+        possibleMove = wp[1].move(boardState, 6, -1);
+        Assert.assertEquals(0, possibleMove.size());
+
+    }
+
+    // -- Functionality-based --
+    // C4: Pawn is not block by other chess (able to move)
+    //      b1: true
+    //      b2: false
+    // C5: x is in range (0 - 7)
+    //      b1: true
+    //      b2: false
+    // C6: y is in range (0 - 7)
+    //      b1: true
+    //      b2: false
+    // Possible Test cases = 1 + (2 - 1) + (2 - 1) + (2 - 1) = 4 cases
+    //         Base Choice = (c4b1,c5b1,c6b1)
+    //          Test Cases = (c4b2,c5b1,c6b1)
+    //                     = (c4b1,c5b2,c6b1)
+    //                     = (c4b1,c5b1,c6b2)
+
+    //test case #5: c4b1,c5b1,c6b1
+    @Test
+    public void testPawnPossibleMove5() {
+        possibleMove = wp[1].move(boardState, 6, 1);
+        Assert.assertEquals(2, possibleMove.size());
+    }
+
+    //test case #6: c4b2,c5b1,c6b1
+    @Test
+    public void testPawnPossibleMove6() {
+        Assert.assertThrows(NullPointerException.class, () -> {
+            wp[1].move(nullBoardState, 6, 1);
+        });
+    }
+
+    //test case #7: c4b1,c5b2,c6b1 (failed)
+    @Test
+    public void testPawnPossibleMove7() {
+        possibleMove = wp[1].move(boardState, -1, 1);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+    //test case #8: c4b1,c5b1,c6b2 (failed)
+    @Test
+    public void testPawnPossibleMove8() {
+        possibleMove = wp[1].move(boardState, 6, -1);
+        Assert.assertEquals(0, possibleMove.size());
+    }
+
+// ---------- end of testing Pawn.move(Cell[][] state, int x, int y) ----------
 }
