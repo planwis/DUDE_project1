@@ -5,6 +5,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import pieces.*;
+import chess.Main;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,7 @@ public class TestCaseDUDE {
     private static Pawn wp[],bp[];
     private static Queen wq,bq;
     private static King wk,bk;
+    private static Main main;
     pieces.Piece P;
     Cell cell;
 
@@ -633,5 +635,46 @@ public class TestCaseDUDE {
         possibleMove = null;
         possibleMove = wp[1].move(boardState, 6, -1);
         Assert.assertEquals(0, possibleMove.size());
+    }
+
+    @Test
+    public void testCheckmate() {
+        // Combination Approach: ECC
+        // -- Interface-based --
+        // C1: color is valid
+        //      b1: true ( >= 0 )
+        //      b2: false ( < 0 )
+//        main = new Main();
+//        main.setVisible(true);
+//        main.setResizable(false);
+        ArrayList<Cell> possibleMove;
+        Cell nullBoardState[][] = null;
+        Cell[][] noChessBoard = new Cell[8][8];
+        for(int i=0;i<8;i++)
+            for(int j=0;j<8;j++)
+            {
+                P=null;
+                cell=new Cell(i,j,P);
+                boardState[i][j]=cell;
+            }
+
+        // test case #1: c1b1
+//        boardState[7][4].removePiece();
+//        boardState[0][0].removePiece();
+//        boardState[0][7].removePiece();
+//        boardState[1][6].removePiece();
+//        boardState[1][7].removePiece();
+        // to set King to center and around with the opposite color to trigger checkmate
+        boardState[4][4].setPiece(wk);
+        boardState[3][7].setPiece(br01);
+        boardState[5][7].setPiece(br02);
+        boardState[3][2].setPiece(bp[6]);
+        boardState[3][6].setPiece(bp[7]);
+//        main.Mainboard.checkmate(1);
+
+//        possibleMove = wk.move(boardState, 4, 4);
+//        System.out.println(possibleMove);
+//        Assert.assertEquals(0, possibleMove.size());
+        // test case #1: c1b2
     }
 }

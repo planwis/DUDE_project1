@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestCaseDUDE" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-10-16T02:38:58" hostname="Nattapons-MacBook-Air.local" time="0.742">
+<testsuite name="TestCaseDUDE" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-10-16T04:41:01" hostname="Nattapons-MacBook-Air.local" time="1.526">
   <properties/>
-  <testcase name="testPawn1PossibleMove" classname="TestCaseDUDE" time="0.742">
-    <failure message="java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 8" type="java.lang.ArrayIndexOutOfBoundsException">java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 8
-	at pieces.Pawn.move(Pawn.java:33)
-	at TestCaseDUDE.testPawn1PossibleMove(TestCaseDUDE.java:634)
+  <testcase name="testCheckmate" classname="TestCaseDUDE" time="1.526">
+    <failure message="java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;8&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;8&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at TestCaseDUDE.testCheckmate(TestCaseDUDE.java:677)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,6 +54,7 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <system-out><![CDATA[]]></system-out>
+  <system-out><![CDATA[[chess.Cell[,0,0,0x0,invalid,layout=java.awt.BorderLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=], chess.Cell[,0,0,0x0,invalid,layout=java.awt.BorderLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=], chess.Cell[,0,0,0x0,invalid,layout=java.awt.BorderLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=], chess.Cell[,0,0,0x0,invalid,layout=java.awt.BorderLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=], chess.Cell[,0,0,0x0,invalid,layout=java.awt.BorderLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=], chess.Cell[,0,0,0x0,invalid,layout=java.awt.BorderLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=], chess.Cell[,0,0,0x0,invalid,layout=java.awt.BorderLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=], chess.Cell[,0,0,0x0,invalid,layout=java.awt.BorderLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]]
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
