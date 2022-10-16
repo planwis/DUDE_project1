@@ -71,27 +71,16 @@ public class TestPlayer {
     }
 
     // test cases #3: c1b2, c2b1, c3b2
-    // infeasible case since gameswon > gamesplayed, but gamewon = 0 and gameplayed > 1
+    // infeasible case since gameswon = gamesplayed, but gamewon = 0 and gameplayed > 0
 
     // test cases #4: c1b2, c2b2, c3b1
     // infeasible case since gameswon < gamesplayed, but gamewon = 0 and gameplayed = 0
 
     // test cases #5: c1b1, c2b2, c3b2
-    // infeasible case since gameswon > gamesplayed, but gamewon = 0 and gameplayed > 1
-    @Test
-    public void testWinPercent5() {
+    // infeasible case since gameswon = gamesplayed, but gamewon > 0 and gameplayed = 0
 
-    }
-
-    // test cases #1: c1b2, c2b1, c3b3
-    @Test
-    public void testWinPercent6() {
-
-    }
-
-
-
-
+    // test cases #6: c1b2, c2b1, c3b3
+    // infeasible case since gameswon > gamesplayed, but gamewon = 0 and gameplayed > 0
 
     // ---------- end of testing Player.winpercent() ----------
 }
