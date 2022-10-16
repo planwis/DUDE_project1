@@ -364,3 +364,42 @@ select test case: (c1b1,c2b1) (c1b1,c2b2) (c1b2,c2b1) (c1b2,c2b2)
    |  -1       |        False    |
    |  0         |     False               |
    |  1         |     False            |
+   
+   ### 10). TestCell
+* Goal : Test the cell constructure behavior
+* Testable function: Cell
+* Parameters: int x, int y, Piece p
+* Return type: void
+* Return value: -
+* Exceptional behavior:-
+* Input domain:
+  * interface-based
+    | Characteristic     | b1     | b2     |
+    | ------------- | ------------- | -------- |
+    | C1: x >=0 | True| False |
+    | C2: y >= 0         | True| False |
+    | C3: p is null |True| False |
+
+  * Functionality-based
+    | Characteristic     | b1     | b2     |
+    | ------------- | ------------- | -------- |
+    | C4: p is an object that extend piece (able to move)| True| False |
+    | C5: x is in range (0 - 7) | True| False |
+    | C6: y is in range (0 - 7)|True| False |
+* Possible Test = max*min = 2*2 = 4
+
+C1-C2: (c1b1,c2b1) (c1b1,c2b2) (c1b2,c2b1) (c1b2,c2b2)
+
+C2-C3: (c2b1,c3b1) (c2b1,c3b2) (c2b2,c3b1) (c2b2,c3b2)
+
+C1-C3: (c1b1,c3b1) (c1b1,c3b2) (c1b2,c3b1) (c1b2,c3b2)
+
+select test case: (c1b1,c2b1,c3b2) (c1b1,c2b2,c3b1) (c1b2,c2b1,c3b1) (c1b2,c2b2,c3b2) 
+* ISP Criteria: PWC
+* Test values and expected values:
+   | Test Values   | Expected Values   |  
+   | ------------- | -------------     | 
+   |  (0, 1, P(bk01))             |    (0,1,bk01)    |
+   |  (0, 1, P(null))             |     (0,-1,null)  |
+   |  (-1, 1, P(null))          |     (-1,1,null)    |
+   |  (-1, -1, P(bk01))         |     (-1,1,bk01)    |
