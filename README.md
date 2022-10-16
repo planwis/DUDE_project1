@@ -22,7 +22,7 @@
     |C6: y is in range of chess board (0 - 7)|True| False |
 * ISP Criteria: ACoC
 * Test values and expected values:
-   | Test Values   | Exoected Values   | 
+   | Test Values   | Expected Values   | 
    | ------------- | -------------     | 
    |               |                   |
    |               |                   |
