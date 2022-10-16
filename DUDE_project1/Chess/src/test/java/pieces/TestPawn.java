@@ -19,7 +19,7 @@ public class TestPawn {
     private static Pawn wp[], bp[];
     private static Queen wq, bq;
     private static King wk, bk;
-    pieces.Piece P;
+    Piece P;
     Cell cell;
 
     // set up default board
@@ -128,6 +128,26 @@ public class TestPawn {
     public void testPawnPossibleMove1() {
         possibleMove = wp[1].move(boardState, 6, 1);
         Assert.assertEquals(2, possibleMove.size());
+        // There is conflict in 'Cell' class on method getX(), and getY()
+        // since there is x, y public attribute there would be getter for them
+        // however, JPanel also has this method which has the same name
+        // It ends up using the getX() and getY() from JPanel
+        // we cannot test it directly, so we test the size of 'possibleMove' instead
+
+//        int[] cellXAssertion = {5,4};
+//        int[] cellYAssertion = {1,1};
+//        int numberOfXYPair = 0;
+//        for (int i = 0; i < cellXAssertion.length; i++) {
+//            for (Cell cell: possibleMove) {
+//                System.out.println(cell.getX() +""+ cell.getY() );
+//                if (cell.getX() == cellXAssertion[i] && cell.getY() == cellYAssertion[i]) {
+//                    numberOfXYPair++;
+//                }
+//            }
+//        }
+//        // if all possible move from ('cellXAssertion' and 'cellYAssertion') are in 'possibleMove'
+//        // then the function return the correct result.
+//        Assert.assertEquals(cellXAssertion.length, numberOfXYPair);
     }
 
     //test case #2: c1b2,c2b1,c3b1
@@ -175,6 +195,26 @@ public class TestPawn {
     public void testPawnPossibleMove5() {
         possibleMove = wp[1].move(boardState, 6, 1);
         Assert.assertEquals(2, possibleMove.size());
+        // There is conflict in 'Cell' class on method getX(), and getY()
+        // since there is x, y public attribute there would be getter for them
+        // however, JPanel also has this method which has the same name
+        // It ends up using the getX() and getY() from JPanel
+        // we cannot test it directly, so we test the size of 'possibleMove' instead
+
+//        int[] cellXAssertion = {5,4};
+//        int[] cellYAssertion = {1,1};
+//        int numberOfXYPair = 0;
+//        for (int i = 0; i < cellXAssertion.length; i++) {
+//            for (Cell cell: possibleMove) {
+//                System.out.println(cell.getX() +""+ cell.getY() );
+//                if (cell.getX() == cellXAssertion[i] && cell.getY() == cellYAssertion[i]) {
+//                    numberOfXYPair++;
+//                }
+//            }
+//        }
+//        // if all possible move from ('cellXAssertion' and 'cellYAssertion') are in 'possibleMove'
+//        // then the function return the correct result.
+//        Assert.assertEquals(cellXAssertion.length, numberOfXYPair);
     }
 
     //test case #6: c4b2,c5b1,c6b1

@@ -12,7 +12,7 @@ public class TestCell {
     private static Pawn wp[],bp[];
     private static Queen wq,bq;
     private static King wk,bk;
-    pieces.Piece P;
+    Piece P;
     Cell cell;
 
     @Before

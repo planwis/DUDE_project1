@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="chess.TestMain" tests="4" skipped="0" failures="2" errors="0" timestamp="2022-10-16T11:41:48" hostname="Wishs-MacBook-Air.local" time="1.488">
+<testsuite name="chess.TestMain" tests="4" skipped="0" failures="2" errors="0" timestamp="2022-10-16T12:57:00" hostname="Wishs-MacBook-Air.local" time="1.497">
   <properties/>
-  <testcase name="testCheckMate1" classname="chess.TestMain" time="1.169">
+  <testcase name="testCheckMate1" classname="chess.TestMain" time="1.174">
     <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at org.junit.Assert.assertFalse(Assert.java:65)
 	at org.junit.Assert.assertFalse(Assert.java:75)
-	at chess.TestMain.testCheckMate1(TestMain.java:32)
+	at chess.TestMain.testCheckMate1(TestMain.java:31)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,13 +54,13 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCheckMate2" classname="chess.TestMain" time="0.121">
+  <testcase name="testCheckMate2" classname="chess.TestMain" time="0.117">
     <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at org.junit.Assert.assertFalse(Assert.java:65)
 	at org.junit.Assert.assertFalse(Assert.java:75)
-	at chess.TestMain.testCheckMate2(TestMain.java:38)
+	at chess.TestMain.testCheckMate2(TestMain.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -107,8 +107,8 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testCheckMate3" classname="chess.TestMain" time="0.112"/>
-  <testcase name="testCheckMate4" classname="chess.TestMain" time="0.084"/>
+  <testcase name="testCheckMate3" classname="chess.TestMain" time="0.099"/>
+  <testcase name="testCheckMate4" classname="chess.TestMain" time="0.105"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

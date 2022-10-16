@@ -3,7 +3,8 @@ package chess;
 import java.awt.*;
 import javax.swing.*;
 
-import pieces.*;
+import pieces.King;
+import pieces.Piece;
 
 /**
  * This is the Cell Class. It is the token class of our GUI.
@@ -20,7 +21,7 @@ public class Cell extends JPanel implements Cloneable{
 	int x,y;                             //is public because this is to be accessed by all the other class
 	private boolean isSelected=false;
 	private boolean ischeck=false;
-	
+
 	//Constructors
 	public Cell(int x,int y,Piece p)
 	{		

@@ -150,7 +150,7 @@ public class Main extends JFrame implements MouseListener
 		
 		Cell cell;
 		board.setBorder(BorderFactory.createLoweredBevelBorder());
-		pieces.Piece P;
+		Piece P;
 		content=getContentPane();
 		setSize(Width,Height);
 		setTitle("Chess");

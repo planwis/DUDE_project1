@@ -20,7 +20,7 @@ public class TestKing {
     private static Pawn wp[], bp[];
     private static Queen wq, bq;
     private static King wk, bk;
-    pieces.Piece P;
+    Piece P;
     Cell cell;
 
     // set up default board
@@ -210,6 +210,27 @@ public class TestKing {
     public void testKingPossibleMove9() {
         possibleMove = wk.move(noChessBoard, 7, 4);
         Assert.assertEquals(5, possibleMove.size());
+
+        // There is conflict in 'Cell' class on method getX(), and getY()
+        // since there is x, y public attribute there would be getter for them
+        // however, JPanel also has this method which has the same name
+        // It ends up using the getX() and getY() from JPanel
+        // we cannot test it directly, so we test the size of 'possibleMove' instead
+
+//        int[] cellXAssertion = {7, 6, 6, 6, 7};
+//        int[] cellYAssertion = {3, 3, 4, 5, 5};
+//        int numberOfXYPair = 0;
+//        for (int i = 0; i < cellXAssertion.length; i++) {
+//            for (Cell cell: possibleMove) {
+//                System.out.println(cell.getX() +""+ cell.getY() );
+//                if (cell.getX() == cellXAssertion[i] && cell.getY() == cellYAssertion[i]) {
+//                    numberOfXYPair++;
+//                }
+//            }
+//        }
+//        // if all possible move from ('cellXAssertion' and 'cellYAssertion') are in 'possibleMove'
+//        // then the function return the correct result.
+//        Assert.assertEquals(cellXAssertion.length, numberOfXYPair);
     }
 
     // test case #10: c4b1, c5b1, c6b2 (failed)

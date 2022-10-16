@@ -3,7 +3,6 @@ package chess;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import pieces.*;
 
 public class TestMain {
     private Main mainClass;
