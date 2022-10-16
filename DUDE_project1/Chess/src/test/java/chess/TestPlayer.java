@@ -1,3 +1,6 @@
+/* Copyright (C) 2022 Rachata Chopdamrongtham, Nattapon Lertkijroongrueng, Pattamaporn Pongpaew, Kantapon Srigadphach, Wish Suchalermkul - All Rights Reserved
+ * You may use, distribute and modify this code under the terms of the MIT license. */
+
 package chess;
 
 import org.junit.Assert;

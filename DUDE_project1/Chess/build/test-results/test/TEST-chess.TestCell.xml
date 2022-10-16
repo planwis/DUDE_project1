@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="chess.TestCell" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-10-16T13:43:22" hostname="Wishs-MacBook-Air.local" time="0.265">
+<testsuite name="chess.TestCell" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-10-16T15:11:11" hostname="Wishs-MacBook-Air.local" time="0.26">
   <properties/>
-  <testcase name="testConstructCell1" classname="chess.TestCell" time="0.264"/>
+  <testcase name="testConstructCell1" classname="chess.TestCell" time="0.259"/>
   <testcase name="testConstructCell2" classname="chess.TestCell" time="0.0"/>
   <testcase name="testConstructCell3" classname="chess.TestCell" time="0.0"/>
   <testcase name="testConstructCell4" classname="chess.TestCell" time="0.0"/>
-  <testcase name="testConstructCell5" classname="chess.TestCell" time="0.0"/>
+  <testcase name="testConstructCell5" classname="chess.TestCell" time="0.001"/>
   <testcase name="testConstructCell6" classname="chess.TestCell" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
