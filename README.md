@@ -134,8 +134,7 @@ However, we measure it by checking the size of that Arraylist and if there is po
    |  (0,-1)         |      NullPointerException              |
    |  (-1,0)         |      NullPointerException              |
    |  (-1,-1)         |      NullPointerException              |
-   |  infeasible        |      -           |
-   |  infeasible         |      -              |
+ 
  
  ### 5). TestKnightPossibleMove
 * Goal : Test the possible move of Knight
@@ -202,3 +201,46 @@ However, we measure it by checking the size of that Arraylist and if there is po
    |  (7,0)         |      NullPointerException            |
    |  (7,-1)         |      NullPointerException              |
    |  (-1,0)         |      NullPointerException            |
+ 
+ ### 8). TestPawnPossibleMove
+* Goal : Test the possible move of Rook
+* Testable function: Pawn.move(Cell[][] state, int x, int y)
+* Parameters: Cell[][] state, int x, int y
+* Return type: ArrayList<Cell>
+* Return value: The ArrayList of possible move
+* Exceptional behavior:- 
+* Input domain:
+  * interface-based
+    | Characteristic     | b1     | b2     |
+    | ------------- | ------------- | -------- |
+    | C1: boardState is not null | True| False |
+    | C2: x >= 0         | True| False |
+    | C3: y >= 0|True| False |
+  
+  * Functionality-based
+    | Pawn is not block by other chess (able to move)  | b1     | b2     |
+    | ------------- | ------------- | -------- |
+    | C4: Rook is not block by other chess (able to move)| True| False |
+    | C5: x is in range of chess board (0 - 7) | True| False |
+    | C6: y is in range of chess board (0 - 7)|True| False |
+* Possible Test cases = 1 + (2 - 1) + (2 - 1) + (2 - 1) = 4 cases
+    * Base Choice = (c4b1,c5b1,c6b1)
+    * Test Cases = (c4b2,c5b1,c6b1),(c4b1,c5b2,c6b1),(c4b1,c5b1,c6b2)
+* ISP Criteria: BCC
+* Test values and expected values:
+Actually the expected value should be Arraylist of possible move.
+However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
+| Test Values   | Expected Values   | 
+   | ------------- | -------------     | 
+   |  (boardState,6,1)        |        2         |
+   |  (nullBoardState,6,1)       |        NullPointerException   |
+   |  (boardState,-1,1)         |      0              |
+   |  (boardState, 6, -1)         |      0           |
+   |  (boardState, 6, 1)         |      2              |
+   |  (nullBoardState, 6, 1)         |      NullPointerException            |
+   |  (boardState, -1, 1)         |      0           |
+   |  (boardState, 6, -1)         |      0           |
+  * nullBoardState = Chess board that contain null value
+  * noChessBoard = Chess board with no chess on the board
+  * boardState = Chess board with all chess that are in normal starting position
+  
