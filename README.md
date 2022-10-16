@@ -78,20 +78,20 @@ However, we measure it by checking the size of that Arraylist and if there is po
 * Test values and expected values:
 Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
-   | Test Values   | Expected Values   | 
-   | ------------- | -------------     | 
-   |  (boardState, 7, 3))        |        ArrayList[]          |
-   |  (nullBoardState, 0, 0)       |        NullPointerException             |
-   |  (boardState, -1, 3)         |        ArrayList[]            |
-   |  (nullBoardState, -1, 3)         |       NullPointerException             |
-   |  (boardState, 7, -1)         |    ArrayList[]              |
-   |  (boardState, 3, -1)         |   ArrayList[]                 |
-   |  (noChessBoard, 7, 3)        |       ArrayList [(7,0),(7,1),(7,2),(7,3),(6,3),(5,2),(4,1),(3,0),(6,4),(5,4),(4,4),(3,4),(2,4),(1,4),(0,4),(6,5),(5,6),(4,7),(7,5),(7,6),(7,7)]|
-   |  (boardState, 7, 3)       |        ArrayList[]             |
-   |  (noChessBoard, -1, 3)         |        ArrayList[]            |
-   |  (boardState, -1, 3)         |       ArrayList[]             |
-   |  (noChessBoard, 7, -1)         |    ArrayList[]              |
-   |  (boardState, 7, -1)         |   ArrayList[]                 |
+   | Test Values   | Expected Values   | Size of  expected values (Array size)|
+   | ------------- | -------------     | -------------  |
+   |  (boardState, 7, 3))        |        ArrayList[]          | 0|
+   |  (nullBoardState, 0, 0)       |        NullPointerException             |-|
+   |  (boardState, -1, 3)         |        ArrayList[]            |0|
+   |  (nullBoardState, -1, 3)         |       NullPointerException             |-|
+   |  (boardState, 7, -1)         |    ArrayList[]              |0|
+   |  (boardState, 3, -1)         |   ArrayList[]                 |0|
+   |  (noChessBoard, 7, 3)        |       ArrayList [(7,0),(7,1),(7,2),(7,3),(6,3),(5,2),(4,1),(3,0),(6,4),(5,4),(4,4),(3,4),(2,4),(1,4),(0,4),(6,5),(5,6),(4,7),(7,5),(7,6),(7,7)]|21|
+   |  (boardState, 7, 3)       |        ArrayList[]             |0|
+   |  (noChessBoard, -1, 3)         |        ArrayList[]            |0|
+   |  (boardState, -1, 3)         |       ArrayList[]             |0|
+   |  (noChessBoard, 7, -1)         |    ArrayList[]              |0|
+   |  (boardState, 7, -1)         |   ArrayList[]                 |0|
   * nullBoardState = Chess board that contain null value
   * noChessBoard = Chess board with no chess on the board
   * boardState = Chess board with all chess that are in normal starting position
