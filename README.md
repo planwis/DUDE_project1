@@ -160,7 +160,6 @@ However, we measure it by checking the size of that Arraylist and if there is po
    |  (nullBoardState, 0, -1)         |      NullPointerException              |
    |  (nullBoardState, -1, 0)          |      NullPointerException              |
    |  (nullBoardState, -1, -1)          |      NullPointerException              |
-
    |  (noChessBoard, 7, 4)       |        ArrayList[(7,3)(6,3)(6,4)(6,5)(7,5)]         |
    |  (noChessBoard, 7, -1)       |        ArrayList[]            |
    |  (noChessBoard, -1, 4)         |      ArrayList[]              |
