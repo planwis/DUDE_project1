@@ -143,8 +143,13 @@ public class TestKnight {
     // C3: y >= 0
     //      b1: true
     //      b2: false
-
+    // Possible Test cases = 1 + (2 - 1) + (2 - 1) + (2 - 1) = 4 cases
+    //         Base Choice = (c1b1,c2b1,c3b1)
+    //          Test Cases = (c1b2,c2b1,c3b1)
+    //                     = (c1b1,c2b2,c3b1)
+    //                     = (c1b1,c2b1,c3b2)
     // test case #1: c1b1, c2b1, c3b1
+
     @Test
     public void testKnightPossibleMove1() {
         possibleMove = wk01.move(boardState, 7, 1);
@@ -183,7 +188,11 @@ public class TestKnight {
     // C6: y is in range (0 - 7)
     //      b1: true
     //      b2: false
-
+    // Possible Test cases = 1 + (2 - 1) + (2 - 1) + (2 - 1) = 4 cases
+    //         Base Choice = (c1b1,c2b1,c3b1)
+    //          Test Cases = (c1b2,c2b1,c3b1)
+    //                     = (c1b1,c2b2,c3b1)
+    //                     = (c1b1,c2b1,c3b2)
     //test case #5: c4b1, c5b1, c6b1
     @Test
     public void testKnightPossibleMove5() {
