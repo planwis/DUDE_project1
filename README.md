@@ -92,7 +92,9 @@ However, we measure it by checking the size of that Arraylist and if there is po
    |  (boardState, -1, 3)         |       ArrayList[]             |
    |  (noChessBoard, 7, -1)         |    ArrayList[]              |
    |  (boardState, 7, -1)         |   ArrayList[]                 |
-
+  * nullBoardState = Chess board that contain null value
+  * noChessBoard = Chess board with no chess on the board
+  * boardState = Chess board with all chess that are in normal starting position
  ### 3). TestPlayer
 * Goal : The win percentage of the player
 * Testable function: winpercent()
@@ -168,7 +170,9 @@ However, we measure it by checking the size of that Arraylist and if there is po
    |  (boardState, 7, -1)         |      ArrayList[]               |
    |  (boardState, -1, 4)          |      ArrayList[]              |
    |  (boardState, -1, -1)          |      ArrayList[]               |
-
+  * nullBoardState = Chess board that contain null value
+  * noChessBoard = Chess board with no chess on the board
+  * boardState = Chess board with all chess that are in normal starting position
  ### 5). TestKnightPossibleMove
 * Goal : Test the possible move of Knight
 * Testable function: Knight.move(Cell[][] state, int x, int y)
@@ -330,4 +334,33 @@ select test case: (c1b1,c2b1) (c1b1,c2b2) (c1b2,c2b1) (c1b2,c2b2)
 // test case #2: c1b1, c2b2
 // test case #3: c1b2, c2b1
 // test case #4: c1b2, c2b2
-  
+
+ ### 9). testCheckMate
+* Goal : Test whether king got checkmate or not
+* Testable function: checkmate
+* Parameters: int color
+* Return type: Boolean
+* Return value: True if got checkmate otherwise False
+* Exceptional behavior:-
+* Input domain:
+  * interface-based
+    | Characteristic     | b1     | b2     |
+    | ------------- | ------------- | -------- |
+    | C1: color > 0 | True| False |
+	
+  * Functionality-based
+    | Characteristic     | b1     | b2     |
+    | ------------- | ------------- | -------- |
+    | C2: Chess color| 0(white)| 1(black) |
+
+* Possible Test = Max(|bC1|,|bC2|) = 2 cases
+  * Test Cases = (c1b1, c1b2, c2b1, c2b2)
+* ISP Criteria: ECC
+* Test values and expected values:
+
+| Test Values   | Expected Values   |  
+   | ------------- | -------------     | 
+   |  2        | False                |
+   |  -1       |        False    |
+   |  0         |     False               |
+   |  1         |     False            |
