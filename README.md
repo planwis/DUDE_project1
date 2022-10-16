@@ -13,28 +13,40 @@
     | C1: boardState is not null | True| False |
     | C2: x >= 0         | True| False |
     |C3: y >= 0|True| False |
-  
+  * Possible Test = 2 * 2 * 2 = 8 test cases
+ 
   * Functionality-based
     | Characteristic     | b1     | b2     |
     | ------------- | ------------- | -------- |
     | C4: Bishop is not block by other chess (able to move)| True| False |
     | C5: x is in range of chess board (0 - 7) | True| False |
     |C6: y is in range of chess board (0 - 7)|True| False |
+   * Possible Test = 2 * 2 * 2 = 8 test cases
 * ISP Criteria: ACoC
 * Test values and expected values:
 Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
    | Test Values   | Expected Values   | 
    | ------------- | -------------     | 
-   |  (7,2)        |        2          |
-   |  (1,-1)       |        0           |
-   |  (-1,2)         |        0            |
-   |  (-1,-1)         |       0             |
-   |  (0,0)         |    NullPointerException               |
-   |  (0,-1)         |   NullPointerException                 |
-   |  (-1,0)         |         NullPointerException          |
-   |  (-1,-1)         |     NullPointerException              |
- 
+   |  (boardState, 7, 2)        |        ArrayList[]         |
+   |  (boardState, 1, -1)       |        ArrayList[]           |
+   |  (boardState, -1, 2)         |        ArrayList[]            |
+   |  (boardState, -1, -1)         |       ArrayList[]             |
+   |  (nullBoardState, 0, 0)         |    NullPointerException               |
+   |  (nullBoardState, 0, -1)         |   NullPointerException                 |
+   |  (nullBoardState, -1, 0)         |         NullPointerException          |
+   |  (nullBoardState, -1, -1)         |     NullPointerException              |
+   |  (noChessBoard, 7, 2)        |        ArrayList[(5,0)(6,1)(6,3)(5,4)(4,5)(3,6)(2,7)]          |
+   |  (noChessBoard, 7, -1)        |        ArrayList[]          |
+   |  (noChessBoard, -1, 2)        |        ArrayList[]          |
+   |  (noChessBoard, -1, -1)        |        ArrayList[]          |
+   |  (boardState, 7, 2)        |        ArrayList[]          |
+   |  (boardState, 7, -1)        |        ArrayList[]         |
+   |  (boardState, -1, 2)        |        ArrayList[]          |
+   |  (boardState, -1, -2)        |        ArrayList[]          |
+  * nullBoardState = Chess board that contain null value
+  * noChessBoard = Chess board with no chess on the board
+  * boardState = Chess board with all chess that are in normal starting position
  ### 2). TestQueenPossibleMove
 * Goal : Test the possible move of Queen
 * Testable function: Queen.move(Cell[][] state, int x, int y)
@@ -126,7 +138,7 @@ Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
    | Test Values   | Expected Values   | 
    | ------------- | -------------     | 
-   |  (7,4)        |        0          |
+   |  (7,4)        |        expected value size = 0 ,-          |
    |  (7,-1)       |        0            |
    |  (-1,4)         |      0              |
    |  (-1,-1)         |      0            |
@@ -164,16 +176,16 @@ However, we measure it by checking the size of that Arraylist and if there is po
 * Test values and expected values:
 Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
-   | Test Values   | Expected Values   | 
+   | Test Values   | Expected Values   |  
    | ------------- | -------------     | 
-   |  (boardState, 7, 1)        |        2          |
+   |  (boardState, 7, 1)        | ArrayList[(5,0),(5,2)]                |
    |  (nullBoardState, 7, 1)       |        NullPointerException    |
-   |  (boardState, -1, 1)         |      0              |
-   |  (boardState, 7, -1)         |      0            |
- |  (noChessBoard, 7, 1)         |      3           |
- |  (knightCantMove, 7, 1)         |      0            |
- |  (noChessBoard, -1, 1)         |      0            |
- |  (noChessBoard, 7, -1)         |      0            |
+   |  (boardState, -1, 1)         |     ArrayList[]               |
+   |  (boardState, 7, -1)         |     ArrayList[]            |
+   |  (noChessBoard, 7, 1)         |    ArrayList[(5,0),(5,2),(6,3)]          |
+   |  (knightCantMove, 7, 1)         |      ArrayList[]          |
+   |  (noChessBoard, -1, 1)         |      ArrayList[]            |
+   |  (noChessBoard, 7, -1)         |      ArrayList[]           |
   * nullBoardState = Chess board that contain null value
   * noChessBoard = Chess board with no chess on the board
   * boardState = Chess board with all chess that are in normal starting position
@@ -208,18 +220,18 @@ Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
    | Test Values   | Expected Values   | 
    | ------------- | -------------     | 
-   |  (boardState, 7, 0)        |        0          |
-   |  (boardState, 7, -1)       |        0    |
-   |  (boardState, -1, 0)         |      0              |
+   |  (boardState, 7, 0)        |        ArrayList[]          |
+   |  (boardState, 7, -1)       |        ArrayList[]    |
+   |  (boardState, -1, 0)         |      ArrayList[]              |
    |  (nullBoardState, 7, 0)         |      NullPointerException            |
    |  (nullBoardState, 7, -1)         |      NullPointerException              |
    |  (nullBoardState, -1, 0)         |      NullPointerException            |
-    |  (noChessBoard, 7, 0)        |        14          |
-    |  (noChessBoard, 7, -1)        |        0          |
-    |  (noChessBoard, -1, 0)        |        0          |
-    |  (boardState, 7, 0)        |        0          |
-    |  (boardState, 7, -1)        |        0          |
-    |  (boardState, -1, 0)        |        0          |
+    |  (noChessBoard, 7, 0)        |        ArrayList[(6,0),(5,0),(4,0),(3,0),(2,0),(1,0),(0,0),(7,1),(7,2),(7,3),(7,4),(7,5),(7,6),(7,7)]          |
+    |  (noChessBoard, 7, -1)        |        ArrayList[]          |
+    |  (noChessBoard, -1, 0)        |        ArrayList[]          |
+    |  (boardState, 7, 0)        |        ArrayList[]          |
+    |  (boardState, 7, -1)        |        ArrayList[]          |
+    |  (boardState, -1, 0)        |        ArrayList[]          |
   * nullBoardState = Chess board that contain null value
   * noChessBoard = Chess board with no chess on the board
   * boardState = Chess board with all chess that are in normal starting position
@@ -253,14 +265,14 @@ Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
 | Test Values   | Expected Values   | 
    | ------------- | -------------     | 
-   |  (boardState,6,1)        |        2         |
+   |  (boardState,6,1)        |        ArrayList[(5,1)(4,1)]         |
    |  (nullBoardState,6,1)       |        NullPointerException   |
-   |  (boardState,-1,1)         |      0              |
-   |  (boardState, 6, -1)         |      0           |
-   |  (boardState, 6, 1)         |      2              |
+   |  (boardState,-1,1)         |      ArrayList[]              |
+   |  (boardState, 6, -1)         |      ArrayList[]          |
+   |  (boardState, 6, 1)         |      ArrayList[(5,1)(4,1)]              |
    |  (nullBoardState, 6, 1)         |      NullPointerException            |
-   |  (boardState, -1, 1)         |      0           |
-   |  (boardState, 6, -1)         |      0           |
+   |  (boardState, -1, 1)         |      ArrayList[]          |
+   |  (boardState, 6, -1)         |      ArrayList[]           |
   * nullBoardState = Chess board that contain null value
   * noChessBoard = Chess board with no chess on the board
   * boardState = Chess board with all chess that are in normal starting position
