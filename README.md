@@ -61,25 +61,39 @@ However, we measure it by checking the size of that Arraylist and if there is po
     | C1: boardState is not null | True| False |
     | C2: x >= 0         | True| False |
     |C3: y >= 0|True| False |
-  
+    |C6: y is in range of chess board (0 - 7)|True| False |
+* Possible Test = 2 + [{2 * (2 - 2)} + {2 * (2 - 1)} + {2 * (2 - 1)}]
+    * Multiple Base Choice = (c4b1, c5b1, c6b1), (c4b2, c5b1, c6b1)
+    * Test Cases = (c4b1, c5b2, c6b1),(c4b2, c5b2, c6b1),(c4b1, c5b1, c6b2),(c4b2, c5b1, c6b2)
+* ISP Criteria: MBCC
   * Functionality-based
     | Characteristic     | b1     | b2     |
     | ------------- | ------------- | -------- |
     | C4: Bishop is not block by other chess (able to move)| True| False |
     | C5: x is in range of chess board (0 - 7) | True| False |
     |C6: y is in range of chess board (0 - 7)|True| False |
+* Possible Test = 2 + [{2 * (2 - 2)} + {2 * (2 - 1)} + {2 * (2 - 1)}] = 6 cases
+    * Multiple Base Choice = (c1b1, c2b1, c3b1), (c1b2, c2b1, c3b1)
+    * Test Cases = (c1b1, c2b2, c3b1),(c1b2, c2b2, c3b1),(c1b1, c2b1, c3b2),(c1b2, c2b1, c3b2)
 * ISP Criteria: MBCC
 * Test values and expected values:
 Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
    | Test Values   | Expected Values   | 
    | ------------- | -------------     | 
-   |  (7,3)        |        0          |
-   |  (0,0)       |        NullPointerException             |
-   |  (-1,3)         |        0            |
-   |  (-1,3)         |       NullPointerException             |
-   |  (7,-1)         |    0              |
-   |  (3,-1)         |   0                 |
+   |  (boardState, 7, 3))        |        ArrayList[]          |
+   |  (nullBoardState, 0, 0)       |        NullPointerException             |
+   |  (boardState, -1, 3)         |        ArrayList[]            |
+   |  (nullBoardState, -1, 3)         |       NullPointerException             |
+   |  (boardState, 7, -1)         |    ArrayList[]              |
+   |  (boardState, 3, -1)         |   ArrayList[]                 |
+   |  (noChessBoard, 7, 3)        |       ArrayList [(7,0),(7,1),(7,2),(7,3),(6,3),(5,2),(4,1),(3,0),(6,4),(5,4),(4,4),(3,4),(2,4),(1,4),(0,4),(6,5),(5,6),(4,7),(7,5),(7,6),(7,7)]
+          |
+   |  (boardState, 7, 3)       |        ArrayList[]             |
+   |  (noChessBoard, -1, 3)         |        ArrayList[]            |
+   |  (boardState, -1, 3)         |       ArrayList[]             |
+   |  (noChessBoard, 7, -1)         |    ArrayList[]              |
+   |  (boardState, 7, -1)         |   ArrayList[]                 |
 
  ### 3). TestPlayer
 * Goal : The win percentage of the player
@@ -138,10 +152,10 @@ Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
    | Test Values   | Expected Values   | 
    | ------------- | -------------     | 
-   |  (7,4)        |        expected value size = 0 ,-          |
-   |  (7,-1)       |        0            |
-   |  (-1,4)         |      0              |
-   |  (-1,-1)         |      0            |
+   |  (7,4)        |       ArrayList[]            |
+   |  (7,-1)       |        ArrayList[]             |
+   |  (-1,4)         |      ArrayList[]               |
+   |  (-1,-1)         |      ArrayList[]             |
    |  (0,0)         |      NullPointerException            |
    |  (0,-1)         |      NullPointerException              |
    |  (-1,0)         |      NullPointerException              |
@@ -212,7 +226,7 @@ However, we measure it by checking the size of that Arraylist and if there is po
     | C5: x is in range of chess board (0 - 7) | True| False |
     | C6: y is in range of chess board (0 - 7)|True| False |
  * Possible Test cases = 2+ [{2* (2-2)} + {2* (2-2)} + {2* (2-2)}] = 6 Cases
-    * Base Choice = (c1b1, c2b1, c3b1) (c1b2, c2b1, c3b1)
+    * Multiple Base Choice = (c1b1, c2b1, c3b1) (c1b2, c2b1, c3b1)
     * Test Cases = (c1b1, c2b1, c3b2),(c1b2, c2b1, c3b2),(c1b1, c2b2, c3b1),(c1b2, c2b2, c3b1)
 * ISP Criteria: MBCC
 * Test values and expected values:
@@ -276,7 +290,7 @@ However, we measure it by checking the size of that Arraylist and if there is po
   * nullBoardState = Chess board that contain null value
   * noChessBoard = Chess board with no chess on the board
   * boardState = Chess board with all chess that are in normal starting position
- ### 8). TestIsIndanger
+ ### 8). testKingIsInDanger
 * Goal : Test that king is under threat or not
 * Parameters: Cell state[][]
 * Return type: Boolean
@@ -287,7 +301,7 @@ However, we measure it by checking the size of that Arraylist and if there is po
     | ------------- | ------------- | -------- |
     | C1: state is null | True| False |
     | C2: king has no legal moves (Stalemate)| True| False |
-
+* ISP Criteria: PWC
 * Possible Test = 2 * 2 = 4 cases
 * ISP Criteria: PWC
 * Test values and expected values:
