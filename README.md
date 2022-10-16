@@ -288,7 +288,7 @@ However, we measure it by checking the size of that Arraylist and if there is po
 * Test values and expected values:
 Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
-| Test Values   | Expected Values   | 
+   | Test Values   | Expected Values   | 
    | ------------- | -------------     | 
    |  (boardState,6,1)        |        ArrayList[(5,1)(4,1)]         |
    |  (nullBoardState,6,1)       |        NullPointerException   |
@@ -358,7 +358,7 @@ select test case: (c1b1,c2b1) (c1b1,c2b2) (c1b2,c2b1) (c1b2,c2b2)
 * ISP Criteria: ECC
 * Test values and expected values:
 
-| Test Values   | Expected Values   |  
+   | Test Values   | Expected Values   |  
    | ------------- | -------------     | 
    |  2        | False                |
    |  -1       |        False    |
