@@ -276,4 +276,37 @@ However, we measure it by checking the size of that Arraylist and if there is po
   * nullBoardState = Chess board that contain null value
   * noChessBoard = Chess board with no chess on the board
   * boardState = Chess board with all chess that are in normal starting position
+ ### 8). TestIsIndanger
+* Goal : Test that king is under threat or not
+* Parameters: Cell state[][]
+* Return type: Boolean
+* Return value: True if king was attacked from the opposite color otherwise False
+* Input domain:
+  * interface-based(C1) + Functionality-based(C2)
+    | Characteristic     | b1     | b2     |
+    | ------------- | ------------- | -------- |
+    | C1: state is null | True| False |
+    | C2: king has no legal moves (Stalemate)| True| False |
+
+* Possible Test = 2 * 2 = 4 cases
+* ISP Criteria: PWC
+* Test values and expected values:
+
+   | Test Values   | Expected Values   |  
+   | ------------- | -------------     | 
+   |  infeasible test        | -                |
+   |  infeasible test       |        -    |
+   |  (kingGotStaleMateBoard)         |     True               |
+   |  (boardState)         |     False            |
+
+C1-C2: (c1b1,c2b1) (c1b1,c2b2) (c1b2,c2b1) (c1b2,c2b2)
+
+C2-C1: (c2b1,c1b1) (c2b1,c1b2) (c2b2,c1b1) (c2b2,c1b2)
+
+select test case: (c1b1,c2b1) (c1b1,c2b2) (c1b2,c2b1) (c1b2,c2b2)
+
+// test case #1: c1b1, c2b1
+// test case #2: c1b1, c2b2
+// test case #3: c1b2, c2b1
+// test case #4: c1b2, c2b2
   
