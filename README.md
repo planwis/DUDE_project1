@@ -157,17 +157,27 @@ However, we measure it by checking the size of that Arraylist and if there is po
     | C4: King is not block by other chess (able to move)| True| False |
     | C5: x is in range of chess board (0 - 7) | True| False |
     | C6: y is in range of chess board (0 - 7)|True| False |
+* Possible Test = 1 + (2 - 1) + (2 - 1) + (2 - 1) = 4 cases
+    * Base Choice = (c1b1,c2b1,c3b1)
+    * Test Cases = (c1b2,c2b1,c3b1),(c1b1,c2b2,c3b1),(c1b1,c2b1,c3b2)
 * ISP Criteria: BCC
 * Test values and expected values:
 Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
    | Test Values   | Expected Values   | 
    | ------------- | -------------     | 
-   |  (7,1)        |        2          |
-   |  (7,1)       |        NullPointerException    |
-   |  (-1,1)         |      0              |
-   |  (7,-1)         |      0            |
-
+   |  (boardState, 7, 1)        |        2          |
+   |  (nullBoardState, 7, 1)       |        NullPointerException    |
+   |  (boardState, -1, 1)         |      0              |
+   |  (boardState, 7, -1)         |      0            |
+ |  (noChessBoard, 7, 1)         |      3           |
+ |  (knightCantMove, 7, 1)         |      0            |
+ |  (noChessBoard, -1, 1)         |      0            |
+ |  (noChessBoard, 7, -1)         |      0            |
+  * nullBoardState = Chess board that contain null value
+  * noChessBoard = Chess board with no chess on the board
+  * boardState = Chess board with all chess that are in normal starting position
+  * knightCantMove = Chess board that set white knight1 on cell (7,1) and was blocked by pawn at cell (5,0) (5,2) and (6,3)
 ### 6). TestRookPossibleMove
 * Goal : Test the possible move of Rook
 * Testable function: Rook.move(Cell[][] state, int x, int y)
@@ -189,20 +199,31 @@ However, we measure it by checking the size of that Arraylist and if there is po
     | C4: Rook is not block by other chess (able to move)| True| False |
     | C5: x is in range of chess board (0 - 7) | True| False |
     | C6: y is in range of chess board (0 - 7)|True| False |
+ * Possible Test cases = 2+ [{2* (2-2)} + {2* (2-2)} + {2* (2-2)}] = 6 Cases
+    * Base Choice = (c1b1, c2b1, c3b1) (c1b2, c2b1, c3b1)
+    * Test Cases = (c1b1, c2b1, c3b2),(c1b2, c2b1, c3b2),(c1b1, c2b2, c3b1),(c1b2, c2b2, c3b1)
 * ISP Criteria: MBCC
 * Test values and expected values:
 Actually the expected value should be Arraylist of possible move.
 However, we measure it by checking the size of that Arraylist and if there is possible move we will also assert moveable cell.
    | Test Values   | Expected Values   | 
    | ------------- | -------------     | 
-   |  (7,0)        |        0          |
-   |  (7,-1)       |        0    |
-   |  (-1,0)         |      0              |
-   |  (7,0)         |      NullPointerException            |
-   |  (7,-1)         |      NullPointerException              |
-   |  (-1,0)         |      NullPointerException            |
- 
- ### 8). TestPawnPossibleMove
+   |  (boardState, 7, 0)        |        0          |
+   |  (boardState, 7, -1)       |        0    |
+   |  (boardState, -1, 0)         |      0              |
+   |  (nullBoardState, 7, 0)         |      NullPointerException            |
+   |  (nullBoardState, 7, -1)         |      NullPointerException              |
+   |  (nullBoardState, -1, 0)         |      NullPointerException            |
+    |  (noChessBoard, 7, 0)        |        14          |
+    |  (noChessBoard, 7, -1)        |        0          |
+    |  (noChessBoard, -1, 0)        |        0          |
+    |  (boardState, 7, 0)        |        0          |
+    |  (boardState, 7, -1)        |        0          |
+    |  (boardState, -1, 0)        |        0          |
+  * nullBoardState = Chess board that contain null value
+  * noChessBoard = Chess board with no chess on the board
+  * boardState = Chess board with all chess that are in normal starting position
+ ### 7). TestPawnPossibleMove
 * Goal : Test the possible move of Rook
 * Testable function: Pawn.move(Cell[][] state, int x, int y)
 * Parameters: Cell[][] state, int x, int y
